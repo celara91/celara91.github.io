@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    padding-top: 100px;
+}
+
+//Fuentes
+@import "sassGifosD/typography";
+
+//Botones
+@import "sassGifosD/buttons";
+
+//Mixes
+@import "sassGifosD/mixes";
+
+//Estilos de Card Tranding Hard, Card Results, Card GIFOS, Card Subir GIFOS, Card Éxito GIFOS
+@import "sassGifosD/cardTrendingHard";
+@import "sassGifosD/cardResults";
+@import "sassGifosD/cardGIFOS";
+@import "sassGifosD/cardSubirGIFOS";
+@import "sassGifosD/cardExitoGIFOS";
+
+
+//Contenido del Home
+@import "sassGifosD/header";
+@import "sassGifosD/sectionPartOne";
+@import "sassGifosD/sectionPartTwo";
+@import "sassGifosD/sectionPartThree";
+@import "sassGifosD/footer";
+@import "sassGifosD/sectionPartResults";
+@import "sassGifosD/sectionFavourites";
+@import "sassGifosD/sectionMyGifos";
+
+//Archivos de Create GIFOS
+@import "sassGifosD/sassCreateGIFOS/createGifosF";
+@import "sassGifosD/sassCreateGIFOS/createGifos_1y2";
+@import "sassGifosD/sassCreateGIFOS/createGifos_3";

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css_gifos/sassDiurno/main.css" id="styleCSS">
+     
+    <title>Crear GIFOS 1</title>
+    <script src="https://kit.fontawesome.com/ea48900f4a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        
+       <img src="img/logo.svg" alt="logo" class="logo" id="logo">
+        <input class="menu-btn" type="checkbox" id="menu-btn">
+        <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+        <nav>
+            <ul class="menu" id="menu">
+                <li id="darkMode" class="styleLI"><a href="#" id="switchMode">Modo Nocturno<div class="borderLi" id="borderLi"></div></a></li>
+                <li class="styleLI"><a href="favoritos.html">Favoritos<div class="borderLi"></div></a></li>
+                <li class="styleLI"><a href="misgifos.html">Mis GIFOS<div class="borderLi"></div></a></li>
+            </ul>
+        </nav>
+        <div class="btn-video" id="btnVideo"><span class="plus" id="plus">+</span></div>
+    </header>
+
+    <main id="main">
+        <section class="sectionCreateGIFOS" id="sectionCreateGIFOS">
+
+            <div class="cameraFilm">
+                <img class="camera" src="img/camara.svg" id="camera" alt="camera">
+                <img class="luz" src="img/element-luz-camara.svg" alt="luz">                
+            </div>
+
+            <div class="video" id="section_video">
+                <div class="titleVideo" id="titleVideo">                    
+                    <h1 class="titleV_h1" id="titleV_1"> Aquí podrás </h1>
+                    <h1 class="titleV_h1" id="titleV_2"> crear tus propios <span>GIFOS</span> </h1>                    
+                </div>
+                <div class="parrafoVideo" id="parrafoVideo">
+                    <p class="parrafoV_p" id="parrafoV_1">¡Crea tu GIFO en sólo 3 pasos!</p>
+                    <p class="parrafoV_p" id="parrafoV_2">(sólo necesitas una cámara para grabar un video)</p>
+                </div>
+                <video id="videoGIFOS"></video>
+                <div class="cuadro" id="cuadro1"></div>
+                <div class="cuadro" id="cuadro2"></div>
+                <div class="cuadro" id="cuadro3"></div>
+                <div class="cuadro" id="cuadro4"></div>
+            </div>
+            <div class="groupNum">
+                <div class="number" id="nOne">1</div>
+                <div class="number" id="nTwo">2</div>
+                <div class="number" id="nThree">3</div>
+            </div>
+            <div class="time" id="time"><span id="minutes">00</span>:<span id="seconds">00</span>:<span id="hundredths">00</span></div>
+            <div class="repeat" id="repeat">REPETIR CAPTURA</div>
+            <img src="img/pelicula.svg" id="cinta" alt="cinta">
+            
+
+            <div class="lineLile"></div>
+            <button class="btnVM" id="comenzar">COMENZAR</button>
+            <button class="btnVM" id="grabar">GRABAR</button>
+            <button class="btnVM" id="finalizar">FINALIZAR</button>
+            <button class="btnVM" id="subir">SUBIR GIFO</button>
+        </section>
+
+    </main>
+    <footer>
+        <div class="foot_section1">
+            <p class="footText1">Compartir en:</p>
+            <div class="icons">
+
+                <a href="https://www.facebook.com/" class="linkIcon" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-facebook-f"></i></a>
+
+                <a href="https://twitter.com/" class="linkIcon" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-twitter"></i></a>
+
+                <a href="https://www.instagram.com/" class="linkIcon" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <p class="footText2">© GIFOS 2020 All Rights Reserved.</p>
+    </footer>
+    
+    <script src="js/cambiosGenerales_CG.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="js/cgifo_1.js"></script>
+</body>
+
+</html>

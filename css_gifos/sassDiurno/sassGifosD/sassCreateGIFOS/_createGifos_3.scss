@@ -1,0 +1,15 @@
+.sectionCreateGIFOS {
+    
+
+    .video_p3 {
+        margin: 0 auto; //Desbloquear para CreateGIFOS 1, 2, 3
+
+        grid-template-areas: //Desbloquear a partir de createGIFOS 3
+            "cuadro1 . cuadro2"
+            ". grabVideo ."
+            ". grabVideo ."
+            "cuadro3 . cuadro4";
+        grid-template-columns: 25px 1fr 25px;
+        grid-template-rows: 27px 1fr 1fr 27px;
+    }
+}

@@ -1,0 +1,173 @@
+//Para versión mobile
+
+main {
+    padding-top: 0;
+}
+
+.ctnGifMax {
+    width: 100%;
+    z-index: 15;
+    position: absolute;
+    background-color: white;
+    opacity: 0.9;
+    padding: 64px 7.7% 0 7.7%;
+    display: grid;
+    grid-template-areas:
+        "iconClose iconClose iconClose"
+        "gif gif gif"
+        "pUser iconFav iconDown"
+        "titleGifo iconFav iconDown";
+    grid-template-rows: 97px 245px 38px;
+    grid-template-columns: 76.33% 13.06% 10.6%;
+
+    .IzqMax {
+        display: none;
+    }
+
+    .DerMax {
+        display: none;
+    }
+
+    .closeMax {
+        grid-area: iconClose;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+    }
+
+    .gifMax {
+        width: 100%;
+        height: 245px;
+        grid-area: gif;
+    }
+
+    #pUser {
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        line-height: 18px;
+        grid-area: pUser;
+        margin-top: 14px;
+        text-indent: 6px;
+        
+    }
+
+    #titleGIFO {
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 19px;
+        grid-area: titleGifo;
+    }
+
+    .iconFavMax {
+        opacity: 0.5;
+        margin-top: 26px;
+        grid-area: iconFav;
+        &:hover {
+            opacity: initial;
+            cursor: pointer;
+        }
+    }
+
+    #downloadMax {
+        margin-top: 17px;
+        grid-area: iconDown;
+        .iconDownMax {
+            opacity: 0.5;
+            padding: 7px 8px;
+            border: 1px solid $colorGrey;
+            border-radius: 6px;
+            
+
+            &:hover {
+                opacity: initial;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .ctnGifMax {
+        grid-template-areas:
+            ". iconClose iconClose iconClose iconClose iconClose iconClose ."
+            ". flechaIzq gif gif gif flechaDer . ."
+            ". . pUser iconFav iconDown . . ."
+            ". . titleGifo iconFav iconDown . . .";
+        grid-template-columns: 1fr 65px 598px 57px 40px 65px 112px 1fr;
+        grid-template-rows: 94px 1fr 45px 1fr;
+
+        .closeMax {
+            width: 15.2px;
+            height: 15.2px;
+        }
+
+        .iconFavMax {
+            border: 1px solid $colorGrey;
+            border-radius: 6px;
+            padding: 8px 7px;
+            margin-top: 22px;
+        }
+
+        .gifMax {
+            height: 385px;
+        }
+
+        #downloadMax {
+            margin-top: 0;
+
+        .iconDownMax {
+            margin-top: 22px;
+        }
+    }
+
+        .IzqMax {
+            display: initial;
+            grid-area: flechaIzq;
+            border: solid 1px $colorLile;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            top: 170px;
+
+            &:hover {
+                background-color: $colorLile;
+            }
+
+            #flechaIzqMax {
+                padding: 12px 14.5px;
+                
+
+                &:hover {
+                    content: url(../../../img/button-left-w.svg);
+                }
+            }
+
+               
+        }
+
+        .DerMax {
+            display: initial;
+            grid-area: flechaDer;
+            border: solid 1px $colorLile;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            margin-left: 25px;
+            top: 170px;
+
+            &:hover {
+                background-color: $colorLile;
+            }
+
+            #flechaDerMax {
+                padding: 12px 14.5px;
+                
+
+                &:hover {
+                    content: url(../../../img/button-right-w.svg);
+                }
+            }
+        }
+    }
+}

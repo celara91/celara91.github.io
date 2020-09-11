@@ -1,0 +1,11 @@
+/*Animación para las barras del menu hamburguesa*/
+@mixin menu_bar ($top) {
+    background-color: $colorLile;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: $top;
+}

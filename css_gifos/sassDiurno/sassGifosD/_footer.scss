@@ -1,0 +1,85 @@
+footer {
+    border-bottom: 5px solid $colorLile;
+    height: 201px; /* En porcentaje según sería 16.3% */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; //Posiciona en el centro los 3 elementos (2 p y 1 div)
+
+    .footText1 {
+        font-size: 15px;
+        margin-left: 38.1%; //143px
+        font-family: "Roboto", sans-serif;
+        color: black;
+        margin-top: 47px;
+        margin-bottom: 22px;
+        line-height: 18px;
+    }
+
+    .footText2 {
+        font-size: 14px;
+        font-family: "Roboto", sans-serif;
+        color: black;
+        text-align: center;
+        margin-top: 47px;
+        margin-bottom: 22px;
+        line-height: 20px;
+    }
+
+    .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 37.3%;
+        margin-right: 37.3%;
+
+        .linkIcon {
+            width: 20px;
+            height: 20px;
+            font-size: 19px;
+            color: $colorBlanli;
+            cursor: pointer;
+
+            &:hover {
+                color: $colorLile;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    footer {
+        height: 121px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .foot_section1 {
+            display: flex;
+            margin-left: 10.8%;
+
+            .footText1 {
+                margin: 0;
+                font-size: 13px;
+            line-height: 20px;
+            margin-right: 17px;
+            
+            }
+
+            .icons {
+                margin: 0;
+
+                .linkIcon {
+                    margin: 0 18px 0 0;
+                }
+                
+            }
+        }
+
+        .footText2 {
+            margin: 0 11% 0 0;
+            font-size: 13px;
+            line-height: 15px;
+        }
+    }
+}

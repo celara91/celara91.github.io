@@ -1,0 +1,144 @@
+.partOne {
+    background-color: $colorGrey2;
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    h1 {
+        margin-left: 12%;
+        margin-right: 11.7%;
+        margin-bottom: 31px;
+        color: white;
+        font-size: 30px;
+        font-family: "Montserrat", sans-serif;
+        line-height: 33px;
+
+        span {
+            color: $colorAqua;
+        }
+    }
+
+    .ilustraHeader {
+        width: 72.8%;
+        margin: 0 13.6%;
+    }
+
+    .inputContainer {
+        .inputSearch {
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            color: $colorGrey;
+            border: white solid 1px;
+            width: 89.1%;
+            height: 50px;
+            border-radius: 27px;
+            margin-left: 5.3%;
+            margin-right: 5.6%;
+            padding-left: 14.7%;
+            padding-right: 17.1%;
+        }
+
+        //Lupa del buscador
+        #inputSearch {
+            background-image: url(../../img/icon-search-mod-noc.svg);
+            background-repeat: no-repeat;
+            background-position-x: 23px;
+            background-position-y: 13px;
+            background-size: 20px;
+            background-color: $colorGrey2;
+        }
+
+        .btnSearch {
+            background-image: url(../../img/icon-search.svg);
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            right: 50px;
+            top: 375px;
+        }
+
+        #lineSearch {
+            color: $colorBlanli;
+            width: 75.1%;
+            margin: 0 auto;
+            position: relative;
+            bottom: 6px;
+        }
+
+        #suggestion {
+            background-color: $colorGrey2;
+            width: 89%;
+            padding: 0 3.8%;
+            list-style-image: url(../../img/icon-search-grey-s.svg);
+            color: $colorBlanli;
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            position: absolute;
+            top: 412px;
+            left: 20px;
+            list-style-position: inside;
+
+            li {
+                height: 25px;
+                padding-left: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .partOne {
+        height: 440px;
+        h1 {
+            margin: 74px auto 24px auto;
+            text-align: center;
+            width: 39.9%;
+            line-height: 50px;
+            font-size: 35px;
+        }
+
+        .ilustraHeader {
+            width: 27.7%;
+            height: 190px;
+            margin: 0 auto;
+        }
+
+        .inputContainer {
+            margin: 0 auto;
+            .inputSearch {
+                width: 551px;
+                padding: 0 54px;
+                margin: 0;
+            }
+
+            .btnSearch {
+                right: 470px;
+                top: 503px;
+            }
+
+            #lineSearch {
+                width: 90%;
+            }
+
+            #suggestion {
+                background-color: $colorGrey2;
+                width: 38.29%;
+                margin: 0 auto;
+                padding: 0 0.9%;
+                list-style-image: url(../../img/icon-search-grey-s.svg);
+                color: $colorBlanli;
+                font-family: "Roboto", sans-serif;
+                font-size: 16px;
+                position: absolute;
+                top: 538px;
+                left: 445px;
+
+                li {
+                    height: 30px;
+                    padding-left: 13px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,106 @@
+.cardGIFOS {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    width: 260px;
+    height: 200px;
+    background-color: $colorLile;
+    opacity: 0.6;
+    display: grid;
+    grid-template-areas:
+    ". fav downCG maxi"
+    "parrafo parrafo parrafo parrafo"
+    "titulo titulo titulo titulo";
+    grid-template-rows: 1fr 22px 46px ;    
+    grid-template-columns: 1fr 42px 42px 42px;
+
+    
+    .pCG {
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        grid-area: parrafo;
+        margin-left: 10px;
+    }
+
+    .titleCG {
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        grid-area: titulo;
+        margin-left: 10px;
+        line-height: 19px;
+    }
+
+    .trashCG {
+        width: 32px;
+        height: 32px;
+        padding: 7px 8px;
+        background-color: white; opacity: 0.7;
+        border-radius: 6px;        
+        display: flex;
+        justify-content: center;
+        grid-area: fav;
+        margin-top: 10px;
+        
+
+        &:hover {
+            opacity: initial;
+            cursor: pointer;
+            
+        }
+    }
+
+    .downCG {
+        width: 32px;
+        height: 32px;
+        background-color: white;
+        opacity: 0.7;
+        border-radius: 6px;
+        grid-area: downCG;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+        .iconDownCG {
+            width: 17px;
+            height: 32px;
+        }
+       
+
+        &:hover {
+            opacity: initial;
+            cursor: pointer;
+        }
+    }
+
+    .maxCG {
+        width: 32px;
+        height: 32px;
+        background-color: white; opacity: 0.7;
+        border-radius: 6px;
+        border: 1px solid $colorLile;        
+        display: flex;
+        justify-content: center;
+        grid-area: maxi;
+        margin-top: 10px;
+
+
+        &:hover {
+            opacity: initial;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .cardGIFOS {
+        width: 98.2%;
+        height: 120px;
+
+        .titleCG {
+            font-size: 13px;
+        }
+    }
+}

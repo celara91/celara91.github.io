@@ -1,0 +1,96 @@
+.partFav { 
+    margin-bottom: 78px;
+    .imgFav {
+        margin-right: 46.1%;
+        margin-left: 46.4%;
+        margin-top: 5px;
+        margin-bottom: 7px;
+    }
+
+    h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        line-height: 30px;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .gridFav {
+        margin-top: 46px;
+        margin-bottom: 78px;
+        margin-left: 5.6%;
+        margin-right: 5.6%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 3.33%;
+        grid-row-gap: 25px;
+
+        #gfav {
+            width: 98.2%; //156px
+            height: 120px;
+        }
+    }
+
+    .gridFavNOResults {
+
+        .sinFav {
+            width: 27%;
+            margin: 30px 36.5%;
+        }
+
+        #pNoFav {
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            line-height: 33px;
+            color: $colorAqua;
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .partFav {
+        .imgFav {
+            margin-right: 706px;
+            margin-left: 706px;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 25px;            
+        }
+
+        .gridFav {
+            margin-left: 10.8%;
+            margin-right: 10.8%;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-column-gap: 29px;
+            grid-row-gap: 30px;
+
+            #gfav {
+                width: 260px;
+                height: 200px;
+            }
+        }
+
+        .gridFavNOResults {
+            padding-bottom: 59px;
+            .sinFav {
+                margin: 109.3px 44.8% 23.7px 44.8%;
+                width: 150px;
+                height: 150px;
+            }
+
+            #pNoFav {
+                font-size: 22px;
+                width: 29.9%;
+                height: 66px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

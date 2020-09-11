@@ -1,0 +1,96 @@
+.partMyGifos {
+    margin-bottom: 78px;
+    .imgMyGifos {
+        margin-right: 46.9%;
+        margin-left: 46.9%;
+        margin-top: 5px;
+        margin-bottom: 7px;
+    }
+
+    h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        line-height: 30px;
+        color: $colorLile;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .gridMyGifos {
+        margin-top: 46px;
+        margin-bottom: 78px;
+        margin-left: 5.6%;
+        margin-right: 5.6%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 3.33%;
+        grid-row-gap: 25px;
+
+        #gifos {
+            width: 98.2%; //156px
+            height: 120px;
+            
+        }
+    }
+
+    .gridGifsNOResults {
+        .sinContenidoGifos {
+            margin: 50px 36.5% 0 36.5%;
+            width: 27%;
+            height: 100px;
+        }
+
+        #pGIFOS {
+            font-family: "Montserrat", sans-serif;
+            font-size: 15px;
+            line-height: 25px;
+            color: $colorAqua;
+            text-align: center;
+            margin-top: 40px;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .partMyGifos {
+        h1 {
+            font-size: 25px;
+        }
+        .imgMyGifos {
+            margin-right: 49.2%;
+            margin-left: 49.1%;
+        }
+
+        .gridMyGifos {
+            margin-left: 10.8%;
+            margin-right: 10.8%;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-column-gap: 29px;
+            grid-row-gap: 30px;
+
+            #gifos {
+                width: 260px;
+                height: 200px;
+                
+            }
+        }
+
+        .gridGifsNOResults {
+            .sinContenidoGifos {
+                width: 150px;
+                height: 150px;
+                margin-top: 111px;
+                margin-left: 44.8%;
+                margin-right: 44.8%;
+            }
+
+            #pGIFOS {
+                padding-bottom: 58px;
+                font-size: 22px;
+            }
+        }
+    }
+}

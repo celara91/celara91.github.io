@@ -1,0 +1,234 @@
+header {
+    border-top: 5px solid $colorLile;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 13;
+
+    .btn-video { //Agregar al darkmode
+        display: none;
+    }
+
+    .logo {
+        margin-left: 5.9%;
+        margin-top: 29px;
+        margin-bottom: 17.2px;
+        float: left;
+        display: block;
+        height: 48.8px;
+        width: 48.8px;
+    }
+
+    ul {
+        font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        height: 484px;
+        list-style: none;
+        overflow: hidden;
+        background-color: rgba(87, 46, 229, 0.9);
+
+        a {
+            display: block;
+            padding: 20px 20px 8px 20px;
+            height: 60px;
+            text-decoration: none;
+            color: #ffffff;
+
+            &:hover {
+                background-color: $colorAqua;
+                color: white;
+            }
+        }
+    }
+
+    nav {
+        clear: both;
+        position: relative;
+        bottom: 0;
+
+        .menu {
+            clear: both;
+            max-height: 0;
+            width: 100%;
+            transition: max-height 0.2s ease-out;
+            position: absolute;
+            top: 0;
+
+            .borderLi {
+                width: 41px;
+                height: 0.1px;
+                border-bottom: 1px solid #ffffff;
+                opacity: 0.5;
+                margin: 0 auto;
+                margin-top: 12px;
+
+            }
+        }
+    }
+
+    .menu-icon {
+        padding: 20px 20px;
+        position: relative;
+        float: right;
+        margin-top: 27px;
+        margin-right: 6px;
+
+        //Barras para el menu hamburguesa
+        .nav-icon {
+            background-color: $colorLile;
+            display: block;
+            height: 2px;
+            width: 15px;
+            position: relative;
+            transition: background 0.2s ease-out;
+
+            /*Revisar mixin*/
+            &::before {
+                @include menu_bar(6px);
+            }
+
+            &::after {
+                @include menu_bar(-6px);
+            }
+        }
+    }
+
+    .menu-btn {
+        display: none;
+
+        /*Función para que se despliegue el menu hamburguesa*/
+        &:checked ~ nav .menu {
+            max-height: 484px;
+            padding-top: 17px;
+        }
+
+        /*Función para que para que la barra de en medio "desaparezca" en la animación*/
+        &:checked ~ .menu-icon .nav-icon {
+            background-color: transparent;
+        }
+
+        /*Función para que la barra rote*/
+        &:checked ~ .menu-icon .nav-icon::before {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        /*Función para que la barra rote*/
+        &:checked ~ .menu-icon .nav-icon::after {
+            transform: rotate(45deg);
+            top: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    header {
+        height: 95px;
+
+        .logo {
+            margin-left: 10.8%;
+            margin-top: 18px;
+            width: 59.1px;
+            height: 59.1px;
+        }
+
+        .btn-video {
+            display: inherit;
+            margin-right: 10.83%;
+            margin-top: 18px;
+            position: absolute;
+            left: 1300px;
+            border: solid 1px $colorLile;
+            border-radius: 50%;
+            width: 54px;
+            height: 54px;
+            cursor: pointer;
+
+            .plus {
+                width: 54px;
+                height: 54px;
+                color: $colorLile;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+            }
+
+            &:hover {
+                background-color: $colorLile;
+
+                .plus {
+                    color: white;
+                }
+            }
+
+            &:active {
+                background-color: $colorBlanli;
+                border: solid 1px $colorBlanli;
+            }
+        }
+
+        nav {
+            width: 27.9%; //400px
+            height: 90px;
+            clear: none;
+            float: right;
+            margin-right: 14.6%; //210px
+
+            .menu {
+                width: 100%;
+                height: 90px;
+                visibility: visible;
+                background-color: white;
+                               
+
+                .styleLI {
+                    float: left;
+                    font-size: 13px;
+                    line-height: 16px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    text-transform: uppercase;
+
+                    a {
+                        color: $colorLile;
+                        
+                        &:hover {
+                            text-decoration: underline $colorAqua;
+                            background-color: white;
+                        }
+
+                        &:active {
+                            color: $colorBlanli;
+                            text-decoration: none;
+                        }
+                    }
+                    
+
+                    .borderLi {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .menu-btn {
+            display: none;
+
+            /*Función para que se desactive el checked del menu hamburguesa y quede visible*/
+            &:not(:checked) ~ nav .menu {
+                max-height: 90px;
+            }
+        }
+
+        .menu-icon {
+            display: none;
+        }
+    }
+}

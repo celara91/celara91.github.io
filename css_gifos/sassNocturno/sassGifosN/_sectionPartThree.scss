@@ -1,0 +1,121 @@
+.partThree {
+    background-color: $colorGrey3;
+    height: 430px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        margin-top: 46px;
+        margin-bottom: 7px;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    div {
+        p {
+            font-size: 16px;
+            font-family: "Roboto", sans-serif;
+            color: white;
+            text-align: center;
+        }
+    }
+
+    .carrousel {
+        .Izq {
+            display: none;
+        }
+
+        .Der {
+            display: none;
+        }
+
+        .carrugifs {
+            margin-top: 32px;
+            margin-bottom: 82px;
+            margin-left: 5.9%; // 22px
+            overflow-x: scroll;
+            display: -webkit-inline-box;
+            width: 90%;
+
+            .c_gifs {
+                height: 187px;
+                width: 243px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .partThree {
+        height: 640px;
+        margin-bottom: 0;
+
+        h2 {
+            font-size: 25px;
+            margin-top: 67px;
+            margin-bottom: 12px;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            p {
+                margin-right: 3px;
+                font-size: 18px;
+            }
+        }
+
+        .carrousel {
+            margin-top: 53px;
+            margin-right: 94px;
+            margin-left: 94px;
+
+            .Izq {
+                display: inherit;
+                border: solid 1px white;
+                width: 40px;
+                height: 40px;
+                position: relative;
+                top: 120px;
+
+                &:hover {
+                    background-color: white;
+
+                    .flechaIzq {
+                        content: url(../../img/button-left-b.svg);
+                    }
+                }
+            }
+
+            .carrugifs {
+                margin: 0 22px;
+                overflow-x: hidden;
+
+                .c_gifs {
+                    width: 357px;
+                    height: 275px;
+                }
+            }
+
+            .Der {
+                display: inherit;
+                border: solid 1px white;
+                width: 40px;
+                height: 40px;
+                position: relative;
+                top: 120px;
+
+                &:hover {
+                    background-color: white;
+
+                    .flechaDer {
+                        content: url(../../img/button-right-b.svg);
+                    }
+                }
+            }
+        }
+    }
+}

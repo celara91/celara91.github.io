@@ -1,0 +1,71 @@
+.cardExitGIFOS {
+    position: absolute;
+    z-index: 10;
+    top: 152px;
+    width: 480px;
+    height: 320px;
+    background-color: $colorLile;
+    opacity: 0.6;
+    display: grid;
+    grid-template-areas:
+        ". DownG link"
+        "check check check"
+        "parrafo parrafo parrafo";
+    grid-template-rows: 121px 27px 1fr;
+    grid-template-columns: 1fr 42px 42px;
+
+    .iconCheck {
+        grid-area: check;
+        margin: 0 228px;
+    }
+
+    .leyendaExitoGIFO {
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+        line-height: 19px;
+        text-align: center;
+        font-weight: bold;
+        grid-area: parrafo;
+    }
+
+    .downG {
+        width: 32px; 
+        height: 32px;
+        background-color: white;
+        opacity: 0.7;
+        border-radius: 6px;
+        grid-area: DownG;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+        .iconDownG {
+            width: 17px;
+            height: 32px;
+        }
+
+        &:hover {
+            opacity: initial;
+            cursor: pointer;
+        }
+    }
+
+    .linkG {
+        width: 32px;
+        height: 32px;
+        background-color: white;
+        opacity: 0.7;
+        border-radius: 6px;
+        border: 1px solid $colorLile;
+        display: flex;
+        justify-content: center;
+        grid-area: link;
+        margin-top: 10px;
+
+        &:hover {
+            opacity: initial;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+.cardResults {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    width: 260px;
+    height: 200px;
+    background-color: $colorLile;
+    opacity: 0.6;
+    display: grid;
+    grid-template-areas:
+        ". fav DownCR maxi"
+        "parrafo parrafo parrafo parrafo"
+        "titulo titulo titulo titulo";
+    grid-template-rows: 1fr 22px 46px;
+    grid-template-columns: 1fr 42px 42px 42px;
+
+    .pCR {
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        grid-area: parrafo;
+        margin-left: 10px;
+    }
+
+    .titleCR {
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        grid-area: titulo;
+        margin-left: 10px;
+        line-height: 19px;
+    }
+
+    .favCR {
+        width: 32px;
+        height: 32px;
+        padding: 7px 8px;
+        background-color: white;
+        opacity: 0.7;
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        grid-area: fav;
+        margin-top: 10px;
+
+        &:hover {
+            opacity: initial;
+            cursor: pointer;
+        }
+    }
+
+    .downCR {
+        width: 32px;
+        height: 32px;
+        background-color: white;
+        opacity: 0.7;
+        border-radius: 6px;
+        grid-area: DownCR;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+        .iconDownCR {
+            width: 17px;
+            height: 32px;
+        }
+
+        &:hover {
+            opacity: initial;
+            cursor: pointer;
+        }
+    }
+
+    .maxCR {
+        width: 32px;
+        height: 32px;
+        background-color: white;
+        opacity: 0.7;
+        border-radius: 6px;
+        border: 1px solid $colorLile;
+        display: flex;
+        justify-content: center;
+        grid-area: maxi;
+        margin-top: 10px;
+
+        &:hover {
+            opacity: initial;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .cardResults {
+        width: 98.2%;
+        height: 120px;
+
+        .titleCR {
+            font-size: 13px;
+        }
+
+    }
+}

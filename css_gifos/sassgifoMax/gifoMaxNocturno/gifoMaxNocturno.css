@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap");
+main {
+  padding-top: 0;
+}
+
+.ctnGifMax {
+  width: 100%;
+  z-index: 15;
+  position: absolute;
+  background-color: #37383C;
+  opacity: 0.90;
+  padding: 64px 7.7% 0 7.7%;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "iconClose iconClose iconClose" "gif gif gif" "pUser iconFav iconDown" "titleGifo iconFav iconDown";
+  -ms-grid-rows: 97px 245px 38px;
+      grid-template-rows: 97px 245px 38px;
+  -ms-grid-columns: 76.33% 13.06% 10.6%;
+      grid-template-columns: 76.33% 13.06% 10.6%;
+}
+
+.ctnGifMax .IzqMax {
+  display: none;
+}
+
+.ctnGifMax .DerMax {
+  display: none;
+}
+
+.ctnGifMax .closeMax {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: iconClose;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+.ctnGifMax .gifMax {
+  width: 100%;
+  height: 245px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: gif;
+}
+
+.ctnGifMax #pUser {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: pUser;
+  margin-top: 14px;
+  text-indent: 6px;
+  color: white;
+}
+
+.ctnGifMax #titleGIFO {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: titleGifo;
+  color: white;
+}
+
+.ctnGifMax .iconFavMax {
+  opacity: 0.5;
+  margin-top: 26px;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: iconFav;
+}
+
+.ctnGifMax .iconFavMax:hover {
+  opacity: initial;
+  cursor: pointer;
+}
+
+.ctnGifMax #downloadMax {
+  margin-top: 17px;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: iconDown;
+}
+
+.ctnGifMax #downloadMax .iconDownMax {
+  opacity: 0.5;
+  padding: 7px 8px;
+  border: 1px solid #6B7989;
+  border-radius: 6px;
+}
+
+.ctnGifMax #downloadMax .iconDownMax:hover {
+  opacity: initial;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1440px) {
+  .ctnGifMax {
+        grid-template-areas: ". iconClose iconClose iconClose iconClose iconClose iconClose ." ". flechaIzq gif gif gif flechaDer . ." ". . pUser iconFav iconDown . . ." ". . titleGifo iconFav iconDown . . .";
+    -ms-grid-columns: 1fr 65px 598px 57px 40px 65px 112px 1fr;
+        grid-template-columns: 1fr 65px 598px 57px 40px 65px 112px 1fr;
+    -ms-grid-rows: 94px 1fr 45px 1fr;
+        grid-template-rows: 94px 1fr 45px 1fr;
+  }
+  .ctnGifMax .closeMax {
+    border: 1px solid white;
+    padding: 13px;
+    width: 15.2px;
+    height: 15.2px;
+  }
+  .ctnGifMax .closeMax:hover {
+    background-color: white;
+  }
+  .ctnGifMax .iconFavMax {
+    border: 1px solid #6B7989;
+    border-radius: 6px;
+    padding: 8px 7px;
+    margin-top: 22px;
+  }
+  .ctnGifMax .gifMax {
+    height: 385px;
+  }
+  .ctnGifMax #downloadMax {
+    margin-top: 0;
+  }
+  .ctnGifMax #downloadMax .iconDownMax {
+    margin-top: 22px;
+  }
+  .ctnGifMax .IzqMax {
+    display: initial;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: flechaIzq;
+    border: solid 1px white;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 170px;
+  }
+  .ctnGifMax .IzqMax #flechaIzqMax {
+    padding: 12px 14.5px;
+  }
+  .ctnGifMax .IzqMax #flechaIzqMax:hover {
+    content: url(../../../img/button-left-b.svg);
+  }
+  .ctnGifMax .IzqMax:hover {
+    background-color: white;
+  }
+  .ctnGifMax .DerMax {
+    display: initial;
+    -ms-grid-row: 2;
+    -ms-grid-column: 6;
+    grid-area: flechaDer;
+    border: solid 1px white;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-left: 25px;
+    top: 170px;
+  }
+  .ctnGifMax .DerMax:hover {
+    background-color: white;
+  }
+  .ctnGifMax .DerMax #flechaDerMax {
+    padding: 12px 14.5px;
+  }
+  .ctnGifMax .DerMax #flechaDerMax:hover {
+    content: url(../../../img/button-right-b.svg);
+  }
+}
+/*# sourceMappingURL=gifoMaxNocturno.css.map */

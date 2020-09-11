@@ -1,0 +1,27 @@
+.btnVM {
+    height: 50px;
+    width: 33.9%;
+    margin: 0 31.1% 0 31.1%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: $colorGrey2;
+    border: 1px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: white;
+        color: black;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .btnVM {
+        width: 8.8%;
+        margin: 0 45.6%;
+        
+    }
+}

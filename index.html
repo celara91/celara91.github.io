@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css_gifos/sassDiurno/main.css" id="styleCSS">
+
+    <title>GIFOS Acámica</title>
+    <script src="https://kit.fontawesome.com/ea48900f4a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <img src="img/logo.svg" alt="logo" class="logo" id="logo">
+        <input class="menu-btn" type="checkbox" id="menu-btn">
+        <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+        <nav>
+            <ul class="menu" id="menu">
+                <li id="darkMode" class="styleLI"><a href="#" id="switchMode">Modo Nocturno<div class="borderLi"
+                            id="borderLi"></div></a></li>
+                <li class="styleLI"><a href="favoritos.html">Favoritos<div class="borderLi"></div></a></li>
+                <li class="styleLI"><a href="misgifos.html">Mis GIFOS<div class="borderLi"></div></a></li>
+            </ul>
+        </nav>
+        <div class="btn-video" id="btnVideo"><span class="plus" id="plus">+</span></div>
+    </header>
+
+    <main id="main">
+
+        <section class="partOne" id="partOne">
+            <h1 id="titleP">Inspírate, busca, guarda, y crea los mejores <span>GIFOS</span></h1>
+            <img src="img/ilustra_header.svg" alt="ilustra_header" id="ilustraHeader" class="ilustraHeader">
+
+            <div id="inputContainer" class="inputContainer">
+                <input placeholder="Busca GIFOS y más" class="inputSearch" id="inputSearch">
+                <button id="btnSearch" class="btnSearch"></button>
+                <hr id="lineSearch">
+                <ul id="suggestion"> </ul>
+            </div>
+            
+        </section>
+
+        <section class="partTwo" id="partTwo">
+
+            <h3>Trending:</h3>
+            
+
+        </section>
+
+        <section class="partThree" id="partThree">
+            <h2>Trending GIFOS</h2>
+            <div>
+                <p>Mira los últimos</p>
+                <p>GIFOS de nuestra comunidad</p>
+            </div>
+
+            <div class="carrousel" id="carrousel">
+
+                <div class="Izq" id="Izq"><img src="img/button-left.svg" id="flechaIzq" class="flechaIzq" alt="flechaIzq"></div>
+
+                <div class="carrugifs" id="carrugifs">
+
+                </div>
+
+                <div class="Der" id="Der"><img src="img/button-right.svg" id="flechaDer" class="flechaDer" alt="flechaDer"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+        <div class="foot_section1">
+            <p class="footText1">Compartir en:</p>
+            <div class="icons">
+
+                <a href="https://www.facebook.com/" class="linkIcon" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-facebook-f"></i></a>
+
+                <a href="https://twitter.com/" class="linkIcon" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-twitter"></i></a>
+
+                <a href="https://www.instagram.com/" class="linkIcon" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <p class="footText2">© GIFOS 2020 All Rights Reserved.</p>
+    </footer>
+    
+    <script src="js/cambiosGenerales.js"></script>
+    
+    <script src="js/trendingGIFOS.js"></script>
+    <script src="js/trending.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/mobile_index.js"></script>
+    
+
+</body>
+
+</html>

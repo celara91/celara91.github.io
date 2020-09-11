@@ -1,0 +1,204 @@
+.sectionCreateGIFOS {
+    margin-right: 167.4px;
+    margin-left: 156px;
+    margin-bottom: 26px;
+    margin-top: 4px;
+    display: grid;
+    
+
+    .cameraFilm {
+        display: flex;
+        grid-area: camera;
+        position: absolute;
+        top: 220px;
+        
+        
+
+        .camera {
+            margin-right: 2px;
+        }
+
+        .luz {
+            width: 91px;
+            height: 151px;
+            align-self: center;
+        }
+    }
+
+    .video {
+        border: solid 1px $colorLile;
+        
+        width: 688px;
+        height: 390px;
+        padding: 20px;
+        display: grid;
+        grid-area: video;
+
+        
+
+        .cuadro {
+            width: 25px;
+            height: 27px;
+        }
+
+        #cuadro1 {
+            grid-area: cuadro1;
+            border-top: 1px solid $colorAqua;
+            border-left: 1px solid $colorAqua;
+        }
+
+        #cuadro2 {
+            grid-area: cuadro2;
+            border-top: 1px solid $colorAqua;
+            border-right: 1px solid $colorAqua;
+        }
+
+        #cuadro3 {
+            grid-area: cuadro3;
+            border-bottom: 1px solid $colorAqua;
+            border-left: 1px solid $colorAqua;
+        }
+
+        #cuadro4 {
+            grid-area: cuadro4;
+            border-bottom: 1px solid $colorAqua;
+            border-right: 1px solid $colorAqua;
+        }
+
+        #videoGIFOS {           
+            z-index: 10;
+            grid-area: grabVideo;
+            margin: auto;
+            width: 480px;
+            height: 320px;
+        }
+
+        .titleVideo {
+            width: 100%;
+            height: 70px;
+            grid-area: title;
+            margin-top: 89px;
+            .titleV_h1 {
+                font-size: 25px;
+                line-height: 35px;
+                color: $colorLile;
+                font-family: "Monserrat", sans-serif;
+                text-align: center;
+                
+                span {
+                    color: $colorAqua;
+                }
+            }
+        }
+        .parrafoVideo {
+            width: 100%;
+            grid-area: parrafo;
+            margin-top: 3px;
+            .parrafoV_p {
+                font-size: 16px;
+                font-family: "Roboto", sans-serif;
+                text-align: center;
+                line-height: 29px;
+            }
+        }
+    }
+
+    .groupNum {
+        display: flex;
+        grid-area: numbers;
+        margin: 24px auto 0 auto;
+        .number {
+            border: 1px solid $colorLile;
+            border-radius: 50%;
+            font-size: 18px;
+            line-height: 21px;
+            font-family: "Roboto", sans-serif;
+            width: 32px;
+            height: 32px;
+            color: $colorLile;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 26px;
+            cursor: pointer;
+
+            &:last-child {
+                margin-right: 0;
+            }
+            
+        }
+    }
+
+    .time {
+        font-size: 15px;
+        line-height: 22px;
+        color: $colorLile;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        width: 73.4px;
+        height: 22px;
+        
+        z-index: 10;
+        position: absolute;
+        right: 315px;
+        top: 520px;
+
+    }
+
+    .repeat {
+        font-size: 13px;
+        line-height: 16px;
+        font-family: "Montserrat", sans-serif;
+        color: $colorLile;
+        font-weight: bold;
+        cursor: pointer;
+
+        z-index: 10;
+        position: absolute;
+        right: 315px;
+        top: 525px;
+
+        &:hover {
+            text-decoration: underline $colorAqua;
+            
+        }
+    }
+
+    #cinta {
+        grid-area: cinta;
+        position: relative;
+        top: 375px;
+    }
+
+    .lineLile {
+        width: 795.9px;
+        height: 6.9px;
+        background-color: $colorLile;
+        margin: 20px auto;
+        grid-area: line;
+    }
+
+    #comenzar {
+        grid-area: btn;
+        width: 127px;
+        margin: 0 auto;
+    }
+
+    #grabar {
+        grid-area: btn;
+        width: 127px;
+        margin: 0 auto;
+    }
+
+    #finalizar {
+        grid-area: btn;
+        width: 127px;
+        margin: 0 auto;
+    }
+
+    #subir {
+        grid-area: btn;
+        width: 127px;
+        margin: 0 auto;
+    }
+}
