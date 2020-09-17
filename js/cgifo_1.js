@@ -1,3 +1,8 @@
+//INICIALIZAR LOCALSTORAGE MYGIFOS
+if(localStorage.getItem("NuevosGifos") == undefined ) {
+  localStorage.setItem("NuevosGifos", "fvMyDds5Bc6ufJHdLs");
+}
+
 //SECCION PRINCIPAL
 let sectionCreateGIFOS = document.getElementById("sectionCreateGIFOS");
 
@@ -120,7 +125,7 @@ function cameraS() {
 };
 
 //FUNCION PARA PANTALLA MORADA 1
-function cardUPGif () {
+function cardUPGif() {
 
   let ctn_video = document.createElement("div");
   ctn_video.id = "ctn_video";
@@ -147,13 +152,13 @@ function cardUPGif () {
   subiendoGIFO.id = "subiendoGIFO";
   subiendoGIFO.classList.add("subiendoGIFO");
   subiendoGIFO.innerHTML = "Estamos subiendo tu GIFO";
-  cardSubirGIFOS.appendChild(subiendoGIFO); 
-  
+  cardSubirGIFOS.appendChild(subiendoGIFO);
+
 }
 
 
 //FUNCION PARA PANTALLA MORADA 2
-function cardSuccessGif (id) {
+function cardSuccessGif(id) {
   let cardSubirGIFOS = document.getElementById("cardSubirGIFOS");
   cardSubirGIFOS.remove();
 
@@ -197,13 +202,13 @@ function cardSuccessGif (id) {
   iconLinkG.alt = "iconLinkG";
   iconLinkG.classList.add("iconLinkG");
   linkG.appendChild(iconLinkG);
-  linkG.onclick = () => { alert("Comparte tu gif: " + "https://giphy.com/gifs/" + id)}
+  linkG.onclick = () => { alert("Comparte tu gif: " + "https://giphy.com/gifs/" + id) }
 
 }
 
 function getUrlById(id) {
 
-return fetch(`https://api.giphy.com/v1/gifs/${id}?api_key=Ods4EcKhWO60qYc7JGihzArT2MGDIqip`)
+  return fetch(`https://api.giphy.com/v1/gifs/${id}?api_key=Ods4EcKhWO60qYc7JGihzArT2MGDIqip`)
     .then(response => response.json())
     .then(json => json.data.images.fixed_height.url);
 }
@@ -215,18 +220,18 @@ function createDownloadL(tagIcon, url, contenedor) {
   linkdown.id = "linkdown";
   console.log("URL FUNCION CREATEDOWN" + url);
   fetch(url)
-      .then(response => response.blob())
-      .then(blob => {
+    .then(response => response.blob())
+    .then(blob => {
 
-          const url = URL.createObjectURL(blob);
-          linkdown.href = url;
-          linkdown.download = "myGiphy.gif";
-          linkdown.appendChild(tagIcon);
-          contenedor.appendChild(linkdown);
+      const url = URL.createObjectURL(blob);
+      linkdown.href = url;
+      linkdown.download = "myGiphy.gif";
+      linkdown.appendChild(tagIcon);
+      contenedor.appendChild(linkdown);
 
-      }).catch(console.error);
+    }).catch(console.error);
   return linkdown;
-  
+
 }
 
 
@@ -237,12 +242,15 @@ const api_key = "Ods4EcKhWO60qYc7JGihzArT2MGDIqip";
 function uploadGif(gif) {
   fetch("https://upload.giphy.com/v1/gifs" + "?api_key=" + api_key, {
     method: "POST",
-    body: gif    
+    body: gif
   }).then(res => {
-    if(res.ok) {
-      res.json().then(res => { 
-           cardSuccessGif(res.data.id);
-         });
+    if (res.ok) {
+      res.json().then(res => {
+        let oldIDS = localStorage.getItem("NuevosGifos");
+        oldIDS = oldIDS + "," + res.data.id;
+        localStorage.setItem("NuevosGifos", oldIDS);
+        cardSuccessGif(res.data.id);
+      });
     } else {
       console.log("Hubo un error. Vuelve a intentarlo más tarde.");
     }
@@ -261,9 +269,9 @@ async function stopRecord(recorder) {
   //invokeSaveAsDialog(blob);
   form = new FormData();
   form.append("file", blob, "myGif.gif");
-    
+
   console.log(form.get("file"));
- 
+
 }
 
 

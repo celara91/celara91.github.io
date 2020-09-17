@@ -1,3 +1,8 @@
+//INICIALIZAR LOCALSTORAGE MYGIFOS
+if(localStorage.getItem("NuevosGifos") == undefined ) {
+    localStorage.setItem("NuevosGifos", "fvMyDds5Bc6ufJHdLs");
+  }
+
 //Crear la sección de partMyGifos
 let partMyGifos = document.getElementById("partMyGifos");
 
@@ -25,7 +30,7 @@ function showGIFOS(array) {
 
 
 //PARAMETROS
-const ids = "fvMyDds5Bc6ufJHdLs,H4oG7Zhb9WJh0szyq1,Mb4jbeLkKRaGSRlKAl,dAnnTtiP8J83KbDpdN";
+let ids = localStorage.getItem("NuevosGifos");
 
 fetch(`https://api.giphy.com/v1/gifs?${APIKEY}&ids=${ids}`).then(response => response.json())
     .then(json => {
@@ -226,7 +231,11 @@ function eraseGifo(user, titleGif, url, slug) {
     misGIFOS.splice(gifIndex, 1);
     localStorage.setItem("mygifos", JSON.stringify(misGIFOS));
 
-
+    let arrayNG = localStorage.getItem("NuevosGifos").split(",");
+    console.log(arrayNG);
+    let newArrayNG = arrayNG.findIndex((id) => id == slug);
+    arrayNG.splice(newArrayNG, 1);
+    localStorage.setItem("NuevosGifos", arrayNG.join(","));
 }
 
 //Función para expandir MYGIFO
